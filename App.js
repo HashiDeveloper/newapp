@@ -1,42 +1,30 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default class App extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Open up App.js to start working on your app!</Text>
-            </View>
-        );
-    }
-}
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-});
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
+// import { createStackTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator} from 'react-navigation-tabs';
+import { View, Text, Stylesheet } from 'react-native';
+import { } from 'react-navigation-stack';
+import starRating from 'react-native-star-rating'
+
+import homeScreen from './home';
+import aboutScreen from './about';
+import settingScreen from './settings';
+import galleryScreen from './gallery';
 
 
 
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
+// const stackNavigator = createStackTabNavigator({
+// login: loginScreen,
+// tabs: tabNavigator
+// })
 
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Open up App.js to start working on your app!</Text>
-//     </View>
-//   );
-// }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const tabNavigator = createBottomTabNavigator({
+  Home: homeScreen,
+  About: aboutScreen,
+  Setting: settingScreen,
+})
+
+export default createAppContainer(tabNavigator)
+
