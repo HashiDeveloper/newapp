@@ -7,7 +7,7 @@ import StarRating from 'react-native-star-rating';
 
 
 
-export default class settingsScreen extends Component {
+export default class resortsScreen extends Component {
     
     constructor(props) {
         super(props);
@@ -20,7 +20,6 @@ export default class settingsScreen extends Component {
         this.setState({
           starCount: rating
         });
-
     }
   render() {
       return (

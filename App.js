@@ -8,9 +8,8 @@ import { } from 'react-navigation-stack';
 import starRating from 'react-native-star-rating'
 
 import homeScreen from './home';
-import aboutScreen from './about';
-import settingScreen from './settings';
-import galleryScreen from './gallery';
+import hotelsScreen from './hotels';
+import resortsScreen from './resorts';
 
 
 
@@ -22,8 +21,8 @@ import galleryScreen from './gallery';
 
 const tabNavigator = createBottomTabNavigator({
   Home: homeScreen,
-  About: aboutScreen,
-  Setting: settingScreen,
+  hotels: hotelsScreen,
+  resorts: resortsScreen,
 })
 
 export default createAppContainer(tabNavigator)
