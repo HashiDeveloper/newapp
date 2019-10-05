@@ -11,14 +11,6 @@ import homeScreen from './home';
 import hotelsScreen from './hotels';
 import resortsScreen from './resorts';
 
-
-
-// const stackNavigator = createStackTabNavigator({
-// login: loginScreen,
-// tabs: tabNavigator
-// })
-
-
 const tabNavigator = createBottomTabNavigator({
   Home: homeScreen,
   hotels: hotelsScreen,
