@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text,  View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text,  View, Image, ScrollView, SafeAreaView } from 'react-native';
 import StarRating from 'react-native-star-rating';
 
 export default class hotelsScreen extends Component {
@@ -17,6 +17,7 @@ export default class hotelsScreen extends Component {
 
   render() {
     return (
+      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       < ScrollView style={styles.container}>
       <View>
       <Text style={styles.headerTitle1}>Hotels Gallery</Text>
@@ -91,6 +92,7 @@ export default class hotelsScreen extends Component {
       </View>
       </View>
       </ScrollView>
+      </SafeAreaView>
       );
 
   }
@@ -107,13 +109,13 @@ export default class hotelsScreen extends Component {
         justifyContent: "center",
         alignItems: "center",
         fontSize: 24,
-        color: 'red',
+        color: 'blue',
         fontWeight: "800",
         marginBottom: 2,
         paddingHorizontal: 0,
         paddingVertical: 5,
         position: 'relative',
-        top: 50,
+        top: 20,
         paddingLeft: 120,
         bottom: 20,
       },

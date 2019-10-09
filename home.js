@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text,  View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text,  View, Image, ScrollView, SafeAreaView } from 'react-native';
 import StarRating from 'react-native-star-rating';
 
 
@@ -18,7 +18,8 @@ onStarRatingPress(rating) {
 
 }
 render() {
-  return <ScrollView style={styles.container}>
+  return <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+   <ScrollView style={styles.container}>
   <View style={styles.detailsContainer}>
   <View>
   <Text style={styles.headerTitle}> Please Book your Next Hotel Here</Text>
@@ -115,6 +116,7 @@ selectedStar={(rating) => this.onStarRatingPress(rating)}/>
 </View>
 </View>
 </ScrollView>
+</SafeAreaView>
 }
 }
 
@@ -133,14 +135,14 @@ const styles = StyleSheet.create({
   headerTitle: {
     justifyContent: "center",
     alignItems: "center",
-    fontSize: 20,
-    color: 'black',
+    fontSize: 22,
+    color: 'blue',
     fontWeight: "800",
     marginBottom: 2,
     paddingHorizontal: 0,
     paddingVertical: 5,
     position: 'relative',
-    top: 60,
+    top: 20,
     paddingLeft: 30,
     // backgroundColor: "#f2f2f2",
     // shadowOpacity: 3,
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: 'relative',
-    marginTop: 30
+    marginTop: 20
   },
 // HORIZONTAL SCROLLVIEW IMAGES
 img: {

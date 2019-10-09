@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text,  View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text,  View, Image, ScrollView, SafeAreaView } from 'react-native';
 import StarRating from 'react-native-star-rating';
 
 export default class resortsScreen extends Component {
@@ -17,6 +17,7 @@ export default class resortsScreen extends Component {
   }
   render() {
     return (
+      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       <ScrollView style={styles.container1}>
       <View style={styles.resortsTitleContainer}>
       <Text style={styles.resortsTitle}>Best Caribbean Resorts</Text>
@@ -103,6 +104,7 @@ export default class resortsScreen extends Component {
       </View>
       </View>
       </ScrollView>
+      </SafeAreaView>
       );
   }
 }
@@ -180,7 +182,7 @@ const styles = StyleSheet.create({
   },
   resortsTitle: {
     color: "blue",
-    top: 30,
+    top: 20,
     fontSize: 24,
     paddingHorizontal: 65,
     paddingVertical: 1,
