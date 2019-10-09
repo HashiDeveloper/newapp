@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text,  View, Image, ScrollView, SafeAreaView } from 'react-native';
 import StarRating from 'react-native-star-rating';
 
+
 export default class resortsScreen extends Component {
 
   constructor(props) {
